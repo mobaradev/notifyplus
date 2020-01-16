@@ -1,0 +1,93 @@
+.notifyplus-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    width: 50vw;
+    box-sizing: border-box;    
+    pointer-events: none;
+}
+
+.notifyplus-container.pos__right {
+    right: 0;
+}
+.notifyplus-container.pos__left {
+    left: 0;
+}
+
+
+.notifyplus-container .element {
+    margin: 14px 12px;
+    width: 250px;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    position: absolute;
+    right: 10;
+    bottom: 10;
+    transition: 1s, transform 2s;
+    box-sizing: border-box;
+    opacity: 0;
+    z-index: 1000;
+}
+.notifyplus-container .element.visible {
+    opacity: 1;
+}
+
+
+.notifyplus-container.pos__right .element {
+    right: 10;
+}
+.notifyplus-container.pos__right .element.hidden {
+    transform: translateX(300px);
+}
+.notifyplus-container.pos__left .element {
+    left: 10;
+}
+.notifyplus-container.pos__left .element.hidden {
+    transform: translateX(-300px);
+}
+
+.notifyplus__style-Default .element {
+    font-family: Helvetica;
+    border-radius: 8px;
+    padding: 4px 10px;
+}
+
+.notifyplus__style-Default .element.success {
+    background-color: #34d634;
+    box-shadow: 0px 0px 8px 1px green;
+}
+
+.notifyplus__style-Default .element:hover.success {
+    background-color: #00bd00;
+}
+
+.notifyplus__style-Default .element.warn {
+    background-color: #ff9421;
+    box-shadow: 0px 0px 8px 1px #da3200;
+}
+
+.notifyplus__style-Default .element:hover.warn {
+    background-color: #ff6537;
+}
+
+.notifyplus__style-Default .element.error {
+    background-color: #ff6c6b;
+    box-shadow: 0px 0px 8px 1px #ff4644;
+}
+
+.notifyplus__style-Default .element:hover.error {
+    background-color: #ff5554;
+    box-shadow: 0px 0px 10px 2px red;
+}
+
+.notifyplus__style-Default .element.info {
+    background-color: #daecda;
+    box-shadow: 0px 0px 8px 1px #505050;
+}
+
+.notifyplus__style-Default .element:hover.info {
+    background-color: #cacaca;
+}
