@@ -26,7 +26,6 @@ class NotifyPlus {
         setTimeout(() => {
             document.getElementById(elementFullID).classList.add('visible'); // it's an animation
             setTimeout(() => {
-                console.log(elementFullID)
                 document.getElementById(elementFullID).classList.add('hidden');
                 setTimeout(() => {
                     for (let i = 0; i < notifyPlus__notifies.length; i++) {
@@ -43,17 +42,11 @@ class NotifyPlus {
     }
     
     updatePositions() {
-        
-        let n = notifyPlus__notifies.length;
         for (let i = 0; i < notifyPlus__notifies.length; i++) {
-            //console.log('notifyplus__element__id=' + notifyPlus__notifies[i]["id"])
             if (!document.getElementById('notifyplus__element__id=' + notifyPlus__notifies[i]["id"]).classList.contains('hidden')) {
                 let previousElementsHeights = 0;
-                if (i > 0) {
-                    for (let j = 0; j < i; j++) {
-                        previousElementsHeights += (document.getElementById('notifyplus__element__id=' + (notifyPlus__notifies[j]["id"])).clientHeight + 20);
-                    }
-
+                for (let j = 0; j < i; j++) {
+                    previousElementsHeights += (document.getElementById('notifyplus__element__id=' + (notifyPlus__notifies[j]["id"])).clientHeight + 20);
                 }
                 document.getElementById('notifyplus__element__id=' + notifyPlus__notifies[i]["id"]).style.bottom = 20 + previousElementsHeights;
             }
