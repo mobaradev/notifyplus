@@ -2,6 +2,7 @@
 ![alt text](https://github.com/mobaradev/notifyplus/raw/master/logo.png)
 
 Notification plugin for websites with pure JavaScript (no JQuery required)
+
 **Live example:** https://mobaradev.github.io/notifyplus/
 
 ![alt_text](https://i.imgur.com/kCQdyvw.png)
