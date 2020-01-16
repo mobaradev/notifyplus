@@ -1,0 +1,46 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/notifyplus.css">
+        <script src="js/notifyplus.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="css/examplePage.css">
+        <script src="js/examplePage.js"></script>
+    </head>
+
+    <body>
+        <header>
+        <img src="logo.png">
+        </header>
+        <hr>
+        There is an example page of <b>Notify+</b> plugin (version 1.0.1) by <a href="https://github.com/mobaradev">@mobaradev</a>
+        <br>
+        <input type="number" placeholder="Duration (default = 3s)" id="interval-input">
+        Position:
+        <div class="buttons-container">
+            <button class="position-button" id="position__left-button">Left</button>
+            <button class="position-button selected" id="position__right-button">Right</button>
+        </div>
+        Click, to show a message
+        <div class="buttons-container">
+            <button id="success-button">Success</button>
+            <button id="info-button">Info</button>
+            <button id="warn-button">Warn</button>
+            <button id="error-button">Error</button>
+        </div>
+        <div class="info-container">
+            <br>
+            or use function <h2><i>NotifyPlus.addNotify(text, type, duration)</i></h2>
+            <i>
+            <br>
+            text is required
+            <br>
+            type is optional, default is 'success'; other types: 'info', 'warn', 'error'
+            <br>
+            duration is optional, default in plugin is 10s
+            <div class="notifyplus-container" id="notifyplus-container"></div>
+            </i>
+        </div>
+    </body>
+
+</html>
