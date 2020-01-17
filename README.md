@@ -1,5 +1,5 @@
 # NotifyPlus
-![alt text](https://github.com/mobaradev/notifyplus/raw/master/logo.png)
+![alt text](https://github.com/mobaradev/notifyplus/raw/master/docs/logo.png)
 
 Notification plugin for websites with pure JavaScript (no JQuery required)
 
@@ -10,32 +10,36 @@ Notification plugin for websites with pure JavaScript (no JQuery required)
 ![alt_text](https://i.imgur.com/hVR42eA.gif)
 
 ## Usage:
-***notifyPlus.addNotify(text, type, duration)***
+***NotifyPlus.addNotify(text, type, duration)***
 
 *text is required*
 
 *type is optional, default is 'success'; other types: 'info', 'warn', 'error'*
 
-*duration is optional, default in plugin is 10s*
+*duration is optional, default is 10s*
 
 ## Configuration:
+***notifyPlus.launch(settings)***
 ```
-notifyPlus__settings = {
+notifyPlus.launch({
     position: 'right',
     style: 'Default',
-    updateInterval: 250,
-    autoLaunch: true
-}
+    updateInterval: 250
+})
 ```
 
 or you can use function:
-***notifyPlus.setSetting(setting, value)***
+***NotifyPlus.setSetting(setting, value)***
 
-*setting: position, style*
-*value: for position: 'right', 'left'; for style: 'Default' or {your_style_name} on css file
+*position: 'right', 'left'*
 
-if autoLaunch is false, you need to use
+*style: 'Default' or your own in css file*
+
+This plugin is disabled by default.
+
+You can launch it with
 ```
-notifyPlus.launch();
+notifyPlus.launch(setting); // or notifyPlus.launch() for default settings
 ```
-to use this plugin
+
+or simply use ***NotifyPlus.addNotify(text, type, duration)*** and plugin will start with default settings
