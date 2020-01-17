@@ -19,7 +19,7 @@ Notification plugin for websites with pure JavaScript (no JQuery required)
 *duration is optional, default is 10s*
 
 ## Configuration:
-***notifyPlus.launch(settings)***
+***NotifyPlus.launch(settings)***
 ```
 notifyPlus.launch({
     position: 'right',
@@ -39,7 +39,7 @@ This plugin is disabled by default.
 
 You can launch it with
 ```
-notifyPlus.launch(setting); // or notifyPlus.launch() for default settings
+NotifyPlus.launch(setting); // or NotifyPlus.launch() for default settings
 ```
 
 or simply use ***NotifyPlus.addNotify(text, type, duration)*** and plugin will start with default settings
