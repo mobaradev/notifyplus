@@ -21,7 +21,7 @@ Notification plugin for websites with pure JavaScript (no JQuery required)
 ## Configuration:
 ***NotifyPlus.launch(settings)***
 ```
-notifyPlus.launch({
+NotifyPlus.launch({
     position: 'right',
     style: 'Default',
     updateInterval: 250
